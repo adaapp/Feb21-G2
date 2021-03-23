@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express()
+const dba = require('./runandbuild.js')
+let db = dba.connect()
 
 app.use(express.static(__dirname + '/public'));
 
@@ -12,5 +14,6 @@ app.get('/artresources', (req, res) => {
 })
 
 app.listen(3000, () => {
+    dba.init(db)
     console.log('listening on port 3000')
 })
