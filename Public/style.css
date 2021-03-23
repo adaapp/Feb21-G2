@@ -1,3 +1,40 @@
-* {
-    background-color: red;
+body {
+    background-color: rgb(189, 189, 189);
+}
+
+#header {
+    text-align: center;
+    /* position: absolute; */
+    /* border: 2px solid red; */
+    border-bottom: 2px solid white;
+    width: 100%;
+}
+
+#title {
+    text-transform: uppercase;
+}
+
+#nav {
+    width: 200px;
+    margin-top: 5%;
+    margin-left: 1%;
+    background-color: #eee;
+}
+
+#nav a {
+    background-color: #eee; 
+    color: black;
+    display: block; 
+    padding: 12px; 
+    text-decoration: none; 
+    margin-bottom: 30px;
+}
+
+#nav a:hover {
+    background-color: rgb(164, 255, 164)
+}
+
+#nav a.active {
+    background-color: #4CAF50;
+    color: white;
 }
