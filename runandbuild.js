@@ -93,7 +93,9 @@ function init(db) {
       }
     });
     db.run(`insert into Resource(Link, Type, Interest) VALUES
-      ("https://www.youtube.com/watch?v=hSaXBVYVcQg","Video","Art");`, (err) => {
+      ("https://www.youtube.com/watch?v=hSaXBVYVcQg","Video","Art"),
+      ("https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
+      ("https://www.youtube.com/watch?v=UW6H5dAPuhY","Video","Art");`, (err) => {
       if (err) {
         console.log(err)
       } else {

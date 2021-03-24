@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express()
+let query = require('./dbqueries.js')
 const dba = require('./runandbuild.js')
 let db = dba.connect()
 
@@ -10,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/artresources', (req, res) => {
-    res.sendFile('./Public/artresources.html', { root: __dirname })
+    query.getAllArtResources(db, req, res)
 })
 
 app.listen(3000, () => {
