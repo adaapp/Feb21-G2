@@ -100,3 +100,22 @@ body {
 #angry {
     font-size: 5rem;
 }
+
+.logindiv {
+    border: 2px solid blue;
+
+}
+
+optgroup {
+    font-size: 3rem;
+}
+
+input, select {
+    display: block;
+    width: 40%;
+    height: 100px;
+}
+
+.answer, .questions, .username {
+    font-size: 3rem;
+}
