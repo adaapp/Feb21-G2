@@ -7,12 +7,12 @@ body {
 #header {
     text-align: center;
     width: 100%;
-    background-color: rgb(243, 158, 158);
+    background-color: rgb(209, 253, 244);
 }
 
 #login {
-    font-size: 3rem;
-    color: yellow;
+    font-size: 4rem;
+    color: rgb(243, 243, 1);
 }
 
 #title {
