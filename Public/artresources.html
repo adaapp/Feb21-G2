@@ -7,13 +7,35 @@
     <link rel="stylesheet" href="style.css">
     <title>Dimensions Library</title>
 </head>
-<body>
+<body onload="getArt()">
     <div id="header">
         <h1 id="title">Welcome to the art page!</h1>
+        <a href="/" id="homepage">Home Page</a>
     </div>
     <h2 id="resourcetitle">Here is a list of art resources...</h2>
     <div id="artresources">
-        
     </div>
+    <script>
+        function getArt() {
+        fetch('/api/artresources', {
+        mode: 'no-cors',
+        method: 'GET'
+        })
+        .then(res => res.json())
+        .then(res => 
+        {
+         let data = (res.artResources)
+         console.log(data)
+         for (let art in data) {
+             let x = document.createElement('a')
+             x.href = data[art].Link
+             x.id = "links"
+             x.innerText = data[art].Title
+             document.getElementById('artresources').appendChild(x)
+         }
+         
+        })
+        }
+    </script>
 </body>
 </html>

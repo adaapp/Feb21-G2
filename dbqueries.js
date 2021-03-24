@@ -6,7 +6,7 @@ function getAllArtResources(db, req, res) {
             console.error(err.message)
         }
         if (!rows) {
-            res.send({ error: 'no art resources found' })
+            res.send({ error: 'Oops! No art resources found' })
         }
         let obj = { artResources: { } }
             rows.forEach((row) => {

@@ -7,10 +7,14 @@ let db = dba.connect()
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.sendFile('./Public/index.html', { root: __dirname })
+    res.sendFile('./public/index.html', { root: __dirname })
 })
 
 app.get('/artresources', (req, res) => {
+    res.sendFile('./public/artresources.html', { root: __dirname })
+})
+
+app.get('/api/artresources', (req, res) => {
     query.getAllArtResources(db, req, res)
 })
 

@@ -82,6 +82,7 @@ function init(db) {
     });
     db.run(`CREATE TABLE IF NOT EXISTS Resource(
       ResourceID INTEGER NOT NULL PRIMARY KEY,
+      Title VARCHAR(100),
       Link TEXT NOT NULL,
       Type VARCHAR(50),
       Interest VARCHAR(50)
@@ -92,10 +93,12 @@ function init(db) {
         console.log('Creating the resources table')
       }
     });
-    db.run(`insert into Resource(Link, Type, Interest) VALUES
-      ("https://www.youtube.com/watch?v=hSaXBVYVcQg","Video","Art"),
-      ("https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
-      ("https://www.youtube.com/watch?v=UW6H5dAPuhY","Video","Art");`, (err) => {
+    db.run(`insert into Resource(Title, Link, Type, Interest) VALUES
+      ("7 Art Warm Ups", "https://www.youtube.com/watch?v=hSaXBVYVcQg","Video","Art"),
+      ("Some youtube video", "https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
+      ("Some other youtube video", "https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
+      ("waste of time", "https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
+      ("Something else", "https://www.youtube.com/watch?v=UW6H5dAPuhY","Video","Art");`, (err) => {
       if (err) {
         console.log(err)
       } else {

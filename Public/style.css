@@ -10,6 +10,7 @@ body {
 
 #title {
     text-transform: uppercase;
+    font-size: 4rem;
 }
 
 #nav {
@@ -39,12 +40,14 @@ body {
 
 #resourcetitle {
     text-align: center;
+    font-size: 2.5rem;
 }
 
 #artresources {
     text-align: center;
     align-content: center;
     font-size: 2rem;
+    padding-top: 50px;
 }
 
 #artresources a {
@@ -58,4 +61,13 @@ body {
     margin-bottom: 50px;
     color: white;
     border-radius: 3px;
-}   
+}
+
+#homepage {
+    font-size: 3rem;
+    align-content: center;
+}
+
+#links {
+    font-size: 3.5rem;
+}
