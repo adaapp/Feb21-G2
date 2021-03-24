@@ -18,6 +18,14 @@ app.get('/api/artresources', (req, res) => {
     query.getAllArtResources(db, req, res)
 })
 
+app.get('/cookingresources', (req, res) => {
+    res.sendFile('./public/cookingresources.html', { root: __dirname })
+})
+
+app.get('/api/cookingresources', (req, res) => {
+    query.getAllCookingResources(db, req, res)
+})
+
 app.listen(3000, () => {
     dba.init(db)
     console.log('listening on port 3000')

@@ -28,10 +28,22 @@
          console.log(data)
          for (let art in data) {
              let x = document.createElement('a')
+             let happy = document.createElement('button')
+             happy.innerText = '😁'
+             let yawn = document.createElement('button')
+             yawn.innerText = '🥱'
+             let angry = document.createElement('button')
+             angry.innerText = '😡'
+             happy.id = 'happy'
+             yawn.id = 'yawn'
+             angry.id = 'angry'
              x.href = data[art].Link
              x.id = "links"
              x.innerText = data[art].Title
              document.getElementById('artresources').appendChild(x)
+             document.getElementById('artresources').appendChild(happy)
+             document.getElementById('artresources').appendChild(yawn)
+             document.getElementById('artresources').appendChild(angry)
          }
          
         })
