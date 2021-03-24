@@ -11,3 +11,7 @@
 ### User can show their reaction to resource using button on library page
 ### Reaction (e.g. Smiley face)  should be shown the chatbox next user’s name
 ### Resource link once clicked should take the user to the resource page 
+
+## Database
+### For our database we decided to use a relational database, using the sqlite language. We created the tables separately on an external website with a testing environment called sqlfiddle (http://sqlfiddle.com/#!5/3d77b/8). Once we had working tables we connected the database to the back end using a function we called connect and get requests to access the database. We then used an inbuilt function called run to insert the data in to the database which included all our tables and queries. The data to be entered was determined by using an ERD we created, using the entities from our physical model to structure our table. As a MVP there were only limited amounts of data inserted into the table, just enough to showcase basic functionality.
+
