@@ -53,7 +53,7 @@ body {
 #resourcetitle {
     text-align: center;
     font-size: 2.5rem;
-    color: pink;
+    color:rgb(36, 76, 240);
 }
 
 #artresources {
@@ -79,7 +79,7 @@ body {
 #homepage {
     font-size: 3rem;
     align-content: center;
-    color: yellow;
+    color: rgb(243, 243, 1);
 }
 
 #links {
@@ -87,16 +87,16 @@ body {
 }
 
 #happy {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-right: 20px;
 }
 
 #yawn {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-right: 20px;
     margin-bottom: 40px;
 }
 
 #angry {
-    font-size: 3rem;
+    font-size: 5rem;
 }
