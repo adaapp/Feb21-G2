@@ -26,6 +26,10 @@ app.get('/api/cookingresources', (req, res) => {
     query.getAllCookingResources(db, req, res)
 })
 
+app.get('/login', (req, res) => {
+    res.sendFile('./public/login.html', { root: __dirname })
+})
+
 app.listen(3000, () => {
     dba.init(db)
     console.log('listening on port 3000')
