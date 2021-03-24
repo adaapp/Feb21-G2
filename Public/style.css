@@ -1,13 +1,13 @@
 body {
     background-color: rgb(252, 230, 178);
-    
-
 }
 
 #header {
     text-align: center;
     width: 100%;
     background-color: rgb(209, 253, 244);
+    position: absolute;
+    right: 1px;
 }
 
 #login {
@@ -28,6 +28,9 @@ body {
     background-color: #eee;
     width: 40%;
     text-align: center;
+    position: absolute;
+    top: 20%;
+    right: 30%;
     
 }
 
@@ -54,9 +57,24 @@ body {
     text-align: center;
     font-size: 2.5rem;
     color:rgb(36, 76, 240);
+    position: absolute;
+    width: 100%;
+    top: 25%;
+}
+
+#bslresourcetitle {
+    text-align: center;
+    font-size: 2.5rem;
+    color:rgb(36, 76, 240);
+    position: absolute;
+    width: 100%;
+    top: 35%;
 }
 
 #artresources {
+    position: absolute;
+    width: 100%;
+    top: 30%;
     text-align: center;
     align-content: center;
     font-size: 2rem;
@@ -101,13 +119,42 @@ body {
     font-size: 5rem;
 }
 
-.logindiv {
-    border: 2px solid blue;
+#logindiv {
+    display: block;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
 
+select {
+    font-size: 2rem;
+}
+
+#form {
+    margin-top: 30px;
+    display: block;
+    position: relative;
+    padding-left: 36%;
 }
 
 optgroup {
     font-size: 3rem;
+}
+
+input::placeholder {
+    font-size: 2rem;
+}
+
+input {
+    font-size: 2rem;
+}
+
+#username {
+    margin-bottom: 50px;
+}
+
+#questions {
+    margin-bottom: 50px;
 }
 
 input, select {
@@ -116,6 +163,14 @@ input, select {
     height: 100px;
 }
 
-.answer, .questions, .username {
-    font-size: 3rem;
+#loginbutton {
+    position: absolute;
+    right: 47%;
+    margin-top: 40px;
+    width: 300px;
+    height: 100px;
+}
+
+#questionpick {
+    font-size: 2rem;
 }
