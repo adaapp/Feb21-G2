@@ -14,7 +14,7 @@
     </div>
     <div id="logindiv">
         <form id="form">
-            <input type="username" id="username" name="username" placeholder="Username...">
+            <input type="username" id="username" name="username" placeholder="Name...">
             <select name="questions" id="questions">
                 <optgroup>
                     <option value="Option1" id="questionpick">Pick a question...</option>
@@ -25,7 +25,12 @@
             </select>
             <input type="answer" id="answer" name="answer" placeholder="Answer...">
         </form>
-        <button id="loginbutton">Login!</button>
+        <button id="loginbutton" onclick=checkUserLogin()>Login!</button>
     </div>
+    <script>
+        function checkUserLogin() {
+            console.log('button has been submitted...')
+        }
+    </script>
 </body>
 </html>

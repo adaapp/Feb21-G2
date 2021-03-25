@@ -78,6 +78,10 @@ app.get('/login', (req, res) => {
     res.sendFile('./public/login.html', { root: __dirname })
 })
 
+app.get('/api/login', (req, res) => {
+    query.getMemberLogin(db, req, res)
+})
+
 app.listen(3000, () => {
     dba.init(db)
     console.log('listening on port 3000')

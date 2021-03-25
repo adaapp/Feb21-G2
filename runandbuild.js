@@ -53,7 +53,7 @@ function init(db) {
       }
     });
     db.run(`insert into Member(FullName, Disability, Question, Answer, Device) VALUES
-    ("Isla","Autism","What was your first pets name?","Twinkle Toes","Mobile");`, (err) => {
+    ("Isla", "Autism", "What was your first pets name?", "Twinkle Toes", "Mobile");`, (err) => {
       if (err) {
         console.log(err)
       } else {
@@ -94,11 +94,11 @@ function init(db) {
       }
     });
     db.run(`insert into Resource(Title, Link, Type, Interest) VALUES
-      ("7 Art Warm Ups", "https://www.youtube.com/watch?v=hSaXBVYVcQg","Video","Art"),
+      ("Getting Started (Youtube video)", "https://www.youtube.com/watch?v=hSaXBVYVcQg","Video","Art"),
       ("How to draw faces", "https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
       ("Some other youtube video", "https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
-      ("waste of time", "https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
-      ("Something else", "https://www.youtube.com/watch?v=UW6H5dAPuhY","Video","Art");`, (err) => {
+      ("Some other youtube video", "https://www.youtube.com/watch?v=iMEBSQJYaAY","Video","Art"),
+      ("Some other youtube video", "https://www.youtube.com/watch?v=UW6H5dAPuhY","Video","Art");`, (err) => {
       if (err) {
         console.log(err)
       } else {

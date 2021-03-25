@@ -9,10 +9,10 @@
 </head>
 <body onload="getArt()">
     <div id="header">
-        <h1 id="title">Welcome to the art page!</h1>
+        <h1 id="title">Fancy getting arty?</h1>
         <a href="/" id="homepage">Home</a>
     </div>
-    <h2 id="resourcetitle">Here is a list of art resources...</h2>
+    <h2 id="resourcetitle"></h2>
     <div id="artresources">
     </div>
     <script>
@@ -40,7 +40,10 @@
              x.href = data[art].Link
              x.id = "links"
              x.innerText = data[art].Title
+             let statement = document.createElement('h3')
+             statement.innerText = 'How did you rate this resource?'
              document.getElementById('artresources').appendChild(x)
+             document.getElementById('artresources').appendChild(statement)
              document.getElementById('artresources').appendChild(happy)
              document.getElementById('artresources').appendChild(yawn)
              document.getElementById('artresources').appendChild(angry)

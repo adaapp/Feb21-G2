@@ -1,7 +1,11 @@
 /*
-    Make login page - SEMI DONE
+    Make login page - DONE
     set up for other resources, make them do nothing - DONE
-    make header fit top of page - ANNOYING ME
+    make header fit top of page - DONE
+*/
+/*
+    Get login func working
+    Add an alert so when a user clicks an emoji, it tell them that their response has been recorded
 */
 
 const sqlite3 = require('sqlite3').verbose();
@@ -31,7 +35,7 @@ function getAllCookingResources(db, req, res) {
             console.log('no cooking found')
             // res.send({ error: 'Oops! No cooking resources found' })
         }
-        let obj = { artResources: { } }
+        let obj = { cookingResources: { } }
             rows.forEach((row) => {
                 obj.artResources[row.ResourceID] = row
             })
@@ -48,7 +52,7 @@ function getAllBakingResources(db, req, res) {
             console.log('no baking found')
             // res.send({ error: 'Oops! No cooking resources found' })
         }
-        let obj = { artResources: { } }
+        let obj = { bakingResources: { } }
             rows.forEach((row) => {
                 obj.artResources[row.ResourceID] = row
             })
@@ -65,7 +69,7 @@ function getAllBSLResources(db, req, res) {
             console.log('no baking found')
             // res.send({ error: 'Oops! No cooking resources found' })
         }
-        let obj = { artResources: { } }
+        let obj = { BSLResources: { } }
             rows.forEach((row) => {
                 obj.artResources[row.ResourceID] = row
             })
@@ -82,7 +86,7 @@ function getAllWorkSkillsResources(db, req, res) {
             console.log('no baking found')
             // res.send({ error: 'Oops! No cooking resources found' })
         }
-        let obj = { artResources: { } }
+        let obj = { workResources: { } }
             rows.forEach((row) => {
                 obj.artResources[row.ResourceID] = row
             })
@@ -99,7 +103,7 @@ function getAllTravellingAloneResources(db, req, res) {
             console.log('no baking found')
             // res.send({ error: 'Oops! No cooking resources found' })
         }
-        let obj = { artResources: { } }
+        let obj = { travellingResources: { } }
             rows.forEach((row) => {
                 obj.artResources[row.ResourceID] = row
             })
@@ -116,7 +120,7 @@ function getAllSportsResources(db, req, res) {
             console.log('no baking found')
             // res.send({ error: 'Oops! No cooking resources found' })
         }
-        let obj = { artResources: { } }
+        let obj = { sportsResources: { } }
             rows.forEach((row) => {
                 obj.artResources[row.ResourceID] = row
             })
@@ -133,7 +137,7 @@ function getAllGardeningResources(db, req, res) {
             console.log('no baking found')
             // res.send({ error: 'Oops! No cooking resources found' })
         }
-        let obj = { artResources: { } }
+        let obj = { gardeningResources: { } }
             rows.forEach((row) => {
                 obj.artResources[row.ResourceID] = row
             })
@@ -141,4 +145,21 @@ function getAllGardeningResources(db, req, res) {
     })
 }
 
-module.exports = { getAllArtResources, getAllCookingResources, getAllBSLResources, getAllBakingResources, getAllWorkSkillsResources, getAllTravellingAloneResources, getAllSportsResources, getAllGardeningResources }
+function getMemberLogin(db, req, res) {
+    db.all(`SELECT * FROM Member`, (err, rows) => {
+        if (err) {
+            console.error(err.message)
+        }
+        if (!rows) {
+            console.log('no member found')
+            res.send({ error: 'Oops! This page cannot be found' })
+        }
+        let obj = { memberLogin: { } }
+            rows.forEach((row) => {
+                obj.memberLogin[row.MemberID] = row
+            })
+        res.send(obj)
+    })
+}
+
+module.exports = { getAllArtResources, getAllCookingResources, getAllBSLResources, getAllBakingResources, getAllWorkSkillsResources, getAllTravellingAloneResources, getAllSportsResources, getAllGardeningResources, getMemberLogin }
