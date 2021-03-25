@@ -145,6 +145,23 @@ function getAllGardeningResources(db, req, res) {
     })
 }
 
+function getAllDigitalSkillsResources(db, req, res) {
+    db.all(`SELECT * FROM resource WHERE interest = "Digital Skills"`, (err, rows) => {
+        if (err) {
+            console.error(err.message)
+        }
+        if (!rows) {
+            console.log('no digital skills found')
+            // res.send({ error: 'Oops! No cooking resources found' })
+        }
+        let obj = { digitalResources: { } }
+            rows.forEach((row) => {
+                obj.digitalSkillsResources[row.ResourceID] = row
+            })
+        res.send(obj)
+    })
+}
+
 function getMemberLogin(db, req, res) {
     db.all(`SELECT * FROM Member`, (err, rows) => {
         if (err) {
@@ -162,4 +179,4 @@ function getMemberLogin(db, req, res) {
     })
 }
 
-module.exports = { getAllArtResources, getAllCookingResources, getAllBSLResources, getAllBakingResources, getAllWorkSkillsResources, getAllTravellingAloneResources, getAllSportsResources, getAllGardeningResources, getMemberLogin }
+module.exports = { getAllArtResources, getAllDigitalSkillsResources, getAllCookingResources, getAllBSLResources, getAllBakingResources, getAllWorkSkillsResources, getAllTravellingAloneResources, getAllSportsResources, getAllGardeningResources, getMemberLogin }

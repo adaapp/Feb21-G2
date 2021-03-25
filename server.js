@@ -74,6 +74,14 @@ app.get('/api/gardeningresources', (req, res) => {
     query.getAllGardeningResources(db, req, res)
 })
 
+app.get('/digitalskillsresources', (req, res) => {
+    res.sendFile('./public/digitalskillsresources.html', { root: __dirname })
+})
+
+app.get('/api/digitalskillsresources', (req, res) => {
+    query.getAllDigitalSkillsResources(db, req, res)
+})
+
 app.get('/login', (req, res) => {
     res.sendFile('./public/login.html', { root: __dirname })
 })
